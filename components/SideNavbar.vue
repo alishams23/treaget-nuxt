@@ -65,9 +65,9 @@
               <span class="  mr-4" style="color: #e0e0e0"> منو </span>
             </li>
             <li>
-              <nuxt-link to="/t/home" class="rtl hover:text-yellow rounded-2xl">
+              <nuxt-link to="/t/Home" class="rtl hover:text-yellow rounded-2xl">
                 <button class="col-12 d-flex align-items-center rounded-13" v-bind:class="
-                  currentRouteName() == 't-home'
+                  currentRouteName() == 't-Home'
                     ? 'btn-material  bg-treaget '
                     : ''
                 ">
