@@ -4,12 +4,7 @@
         <masonry-wall :items="results[0]" :ssr-columns="1" :column-width="160" :gap="16">
             <template #default="{ item, index }">
     
-              <nuxt-link class :to="'/t/PicturePost/' + item.id">
-                <img :src="item.image" class="rounded-md" v-show="item.loaded" @load="onImgLoad(index)" />
-              </nuxt-link>
-    
-    
-              <div class=" loaderBox rounded-md" style="height:200px" v-if="!item.loaded"></div>
+              <SampleImageItem :data="item" :index="index"/>
             </template>
           </masonry-wall>
     </div>
@@ -82,8 +77,11 @@ export default {
     },
    
     onImgLoad(index) {
-
-      this.results[0][index]["loaded"] = true
+      this.$nextTick( ()=> {
+        this.results[0][index]["loaded"] = true})
+        
+    
+      
     }
   },
   beforeDestroy() {
