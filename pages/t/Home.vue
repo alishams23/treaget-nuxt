@@ -1,10 +1,7 @@
 <template>
 
-    <div class="row justify-content-center  pt-0  " id="home">
+    <div class="d-flex flex-row justify-content-center  pt-0  " id="home">
       <!-- left sidebar-->
-
-
-
       <div class=" col-xl-7 col-lg-7 col-md-12 col-12   " >
         <div class="relative mx-lg-3">
           <div class="">
