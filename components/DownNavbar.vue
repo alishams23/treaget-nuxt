@@ -1,7 +1,7 @@
 <template >
   <div class="d-block d-sm-none fixed-bottom">
     <div class="d-flex justify-content-end " v-if="
-                  currentRouteName() == 't-home' ||   currentRouteName() == 't-explore'">
+                  currentRouteName() == 't-Home' ||   currentRouteName() == 't-explore'">
 
 
       <div class="drop   drop--up m-3">
@@ -85,10 +85,10 @@
     <div class="bg-white border nav">
 
 
-      <nuxt-link to="/t/home" class="nav-item btn-material" :class=" currentRouteName() == 't-home'
+      <nuxt-link to="/t/home" class="nav-item btn-material" :class=" currentRouteName() == 't-Home'
                     ? 'active bg-treaget '
                     : 'nav-color-inactive'">
-        <i class="fa-home" :class=" currentRouteName() == 't-home'
+        <i class="fa-home" :class=" currentRouteName() == 't-Home'
                     ? 'fa'
                     : 'fad'" style="font-size:20px"></i>
         <span class="nav-text">خانه</span>
