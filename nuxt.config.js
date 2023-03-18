@@ -39,23 +39,23 @@ export default {
 
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
-        // ['nuxt-twa-module', {
-        //     /* module options */
-        //     defaultUrl: 'https://treaget.com',
-        //     hostName: 'treaget.com',
-        //     // sha256Fingerprints: ['/* your SHA-256 keys */'],
-        //     applicationId: 'com.treaget.treagetlight',
-        //     launcherName: 'treaget',
-        //     versionCode: 1,
-        //     versionName: '1.0',
-        //     statusBarColor: 'white',
+        ['nuxt-twa-module', {
+            /* module options */
+            defaultUrl: 'https://treaget.com',
+            hostName: 'treaget.com',
+            sha256Fingerprints: ['45:B5:72:8F:DA:E2:E6:5B:E2:09:DB:D4:4B:22:EE:40:1E:A2:27:42:CC:9F:47:CB:42:B2:CE:88:1F:BF:EE:96'],
+            applicationId: 'com.treaget.treaget',
+            launcherName: 'treaget',
+            versionCode: 1,
+            versionName: '1.0.0',
+            statusBarColor: '#FF4500',
 
-        //     /* optional */
-        //     /* overwrite default location for icon */
-        //     iconPath: '/static/icon.png',
-        //     /* Overwrite folder where to put .wellknown */
-        //     distFolder: '.nuxt/dist/client',
-        // }],
+            /* optional */
+            /* overwrite default location for icon */
+            iconPath: '/static/icon.png',
+            /* Overwrite folder where to put .wellknown */
+            distFolder: '.nuxt/dist/client',
+        }],
 
         // https://go.nuxtjs.dev/axios
         '@nuxtjs/axios',
