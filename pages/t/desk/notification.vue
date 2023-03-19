@@ -51,7 +51,7 @@ export default {
   methods: {
     async getData() {
       this.loading = true;
-      await fetch(`https://treaget.com/api/NotificationApi/?page=${this.page}`, {
+      await fetch(`http://127.0.0.1:8000/api/NotificationApi/?page=${this.page}`, {
         headers: {
           "Content-type": "application/json",
           Accept: "application/json",

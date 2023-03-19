@@ -86,7 +86,7 @@ export default {
       userSuggestion: [],
       userFollowing: [],
       loadingFollowing: true,
-      url: "https://treaget.com/api/HomeApiView/",
+      url: "http://127.0.0.1:8000/api/HomeApiView/",
       selectedUser: null,
     };
   },
@@ -102,7 +102,7 @@ export default {
         : (userUrl = "");
 
       await fetch(
-        `https://treaget.com/api/HomeApiView/?page=${page}${userUrl}`,
+        `http://127.0.0.1:8000/api/HomeApiView/?page=${page}${userUrl}`,
         {
           headers: {
             "Content-type": "application/json",
@@ -120,7 +120,7 @@ export default {
 
     getUserFollowing() {
       this.loadingFollowing = true;
-      fetch(`https://treaget.com/api/following/`, {
+      fetch(`http://127.0.0.1:8000/api/following/`, {
         headers: {
           "Content-type": "application/json",
           Accept: "application/json",

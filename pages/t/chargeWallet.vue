@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <form class="grid grid-cols-2 gap-3 lg:p-6 p-4" :action="`https://treaget.com/api/wallet/IncreaseMoney/${number}`">
+    <form class="grid grid-cols-2 gap-3 lg:p-6 p-4" :action="`http://127.0.0.1:8000/api/wallet/IncreaseMoney/${number}`">
       <div class="col-span-2">
         <label class="rtl fs-4 text-treaget irsa">شارژ کیف پول</label>
         <p class="text-right mt-3 fs-6 text-muted">مبلغ مورد نظر برای افزایش شارژ</p>

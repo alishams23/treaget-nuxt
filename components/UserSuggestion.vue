@@ -52,7 +52,7 @@ export default {
     },
     methods: {
         getUserSuggestion() {
-      fetch(`https://treaget.com/api/UserSuggestion/`, {
+      fetch(`http://127.0.0.1:8000/api/UserSuggestion/`, {
         headers: {
           "Content-type": "application/json",
           Accept: "application/json",

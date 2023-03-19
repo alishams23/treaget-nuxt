@@ -99,7 +99,7 @@ export default {
       this.loading = true;
       await axios
         .post(
-          `https://treaget.com/api/AddRequestApi/`,
+          `http://127.0.0.1:8000/api/AddRequestApi/`,
           { body: this.body, title: this.title, price: this.price },
           {
             headers: {

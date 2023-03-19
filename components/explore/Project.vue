@@ -44,7 +44,7 @@ export default {
         async searchExploreProject() {
             this.loading = true
 try{
-    await fetch(`https://treaget.com/api/RequestSearchApi/?search=${this.search}&page=${this.page}`, {
+    await fetch(`http://127.0.0.1:8000/api/RequestSearchApi/?search=${this.search}&page=${this.page}`, {
                 headers: {
                     "Content-type": "application/json",
                     Accept: "application/json",

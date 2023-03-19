@@ -23,7 +23,7 @@ export default {
   methods: {
     PictureApi() {
       fetch(
-        `https://treaget.com/api/favoritesApi/${this.username}/`
+        `http://127.0.0.1:8000/api/favoritesApi/${this.username}/`
       )
         .then((response) => response.json())
         .then((data) => {

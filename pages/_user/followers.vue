@@ -66,7 +66,7 @@ export default {
     methods: {
         getData() {
             this.loading = true
-            fetch(`https://treaget.com/api/followersList/?username=${this.$route.params.user}`, {
+            fetch(`http://127.0.0.1:8000/api/followersList/?username=${this.$route.params.user}`, {
                 headers: {
                     "Content-type": "application/json",
                     Accept: "application/json",
@@ -83,7 +83,7 @@ export default {
             this.data[index].is_followed = 'loading'
             try {
                 await fetch(
-                    `https://treaget.com/api/FollowUnfollowApi/${user.username}`,
+                    `http://127.0.0.1:8000/api/FollowUnfollowApi/${user.username}`,
                     {
                         headers: {
                             "Content-type": "application/json",

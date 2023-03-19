@@ -41,7 +41,7 @@ export default {
     modules: [
         ['nuxt-twa-module', {
             /* module options */
-            defaultUrl: 'https://treaget.com',
+            defaultUrl: 'http://127.0.0.1:8000',
             hostName: 'treaget.com',
             sha256Fingerprints: ['45:B5:72:8F:DA:E2:E6:5B:E2:09:DB:D4:4B:22:EE:40:1E:A2:27:42:CC:9F:47:CB:42:B2:CE:88:1F:BF:EE:96'],
             applicationId: 'com.treaget.treaget',
@@ -76,7 +76,7 @@ export default {
         // fcmPublicVapidKey: '<publicVapidKey>' // OPTIONAL : Sets vapid key for FCM after initialization
     },
     sitemap: {
-        hostname: 'https://treaget.com',
+        hostname: 'http://127.0.0.1:8000',
         gzip: true,
         exclude: [
 

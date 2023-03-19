@@ -235,7 +235,7 @@ export default {
   methods: {
     async getData() {
       this.loading = true;
-      await fetch(`https://treaget.com/api/SafePaymentApi/`, {
+      await fetch(`http://127.0.0.1:8000/api/SafePaymentApi/`, {
         headers: {
           "Content-type": "application/json",
           Accept: "application/json",
@@ -250,7 +250,7 @@ export default {
     },
     async accept(id) {
       this.loading = true;
-      await fetch(`https://treaget.com/api/AcceptSafePaymentApi/${id}`, {
+      await fetch(`http://127.0.0.1:8000/api/AcceptSafePaymentApi/${id}`, {
         headers: {
           "Content-type": "application/json",
           Accept: "application/json",
@@ -262,7 +262,7 @@ export default {
     },
     async refuse(id) {
       this.loading = true;
-      await fetch(`https://treaget.com/api/RefuseSafePaymentApi/?pk=${id}`, {
+      await fetch(`http://127.0.0.1:8000/api/RefuseSafePaymentApi/?pk=${id}`, {
         headers: {
           "Content-type": "application/json",
           Accept: "application/json",

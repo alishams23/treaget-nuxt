@@ -194,7 +194,7 @@ export default {
       if ((a == false && b == true) || (a == true && b == false)) {
         this.loading = true;
         await axios
-          .post(`https://treaget.com/api/UserCreate/`, {
+          .post(`http://127.0.0.1:8000/api/UserCreate/`, {
             "username": this.username,
             "password": this.Password,
             "email": this.email,

@@ -53,7 +53,7 @@ export default {
       this.nextPage = true
       try{
         await fetch(
-        `https://treaget.com/api/PictureSearchApi/?page=${this.search == "" || this.search == null ? 1 : this.page}&search=${this.search}`,
+        `http://127.0.0.1:8000/api/PictureSearchApi/?page=${this.search == "" || this.search == null ? 1 : this.page}&search=${this.search}`,
         {
           headers: {
             "Content-type": "application/json",

@@ -172,7 +172,7 @@ export default {
       this.serviceOption.splice(index, 1);
     },
     submitModel() {
-      fetch("https://treaget.com/api/AddOptionService/", {
+      fetch("http://127.0.0.1:8000/api/AddOptionService/", {
         method: "post",
         credentials: "same-origin",
         headers: {
@@ -203,7 +203,7 @@ export default {
         dataOption.push(element["id"]);
       });
       this.loading = true
-      await fetch("https://treaget.com/api/AddService/", {
+      await fetch("http://127.0.0.1:8000/api/AddService/", {
         method: "post",
         credentials: "same-origin",
         headers: {
@@ -226,7 +226,7 @@ export default {
 
     },
     getData() {
-      fetch(`https://treaget.com/api/ProductApi/`, {
+      fetch(`http://127.0.0.1:8000/api/ProductApi/`, {
         headers: {
           "Content-type": "application/json",
           Accept: "application/json",

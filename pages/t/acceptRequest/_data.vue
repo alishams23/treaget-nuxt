@@ -83,7 +83,7 @@ export default {
     async sendData() {
       this.loading = true;
       await fetch(
-        `https://treaget.com/api/AddAcceptRequestApi/${this.$route.params.data}/`,
+        `http://127.0.0.1:8000/api/AddAcceptRequestApi/${this.$route.params.data}/`,
         {
           method: "post",
           credentials: "same-origin",

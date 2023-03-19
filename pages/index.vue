@@ -56,7 +56,7 @@
               </div>
               <div class="download-buttons">
                 <div>
-                  <a href="https://treaget.com/staticApi/main/treaget.apk" download target="_blank"
+                  <a href="http://127.0.0.1:8000/staticApi/main/treaget.apk" download target="_blank"
                     class="google-play col-12">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white"
                       viewBox="0 0 452.43 473.97">
@@ -541,7 +541,7 @@
 
                 <div class="download-buttons">
                   <h5 class="rtl">ورود به پنل</h5>
-                  <a href="https://treaget.com/staticApi/main/treaget.apk" download target="_blank" class="google-play">
+                  <a href="http://127.0.0.1:8000/staticApi/main/treaget.apk" download target="_blank" class="google-play">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white"
                       viewBox="0 0 452.43 473.97">
                       <defs>
@@ -584,7 +584,7 @@
           </div>
           <div class="row">
             <div class="d-flex flex-column align-items-start">
-              <a href="https://treaget.com/api/wallet/enamad/" class=" d-flex flex-column align-items-center border rounded-10 p-2" style="">
+              <a href="http://127.0.0.1:8000/api/wallet/enamad/" class=" d-flex flex-column align-items-center border rounded-10 p-2" style="">
                 <img src="@/assets/inside/images/enamad.png" style="width:70px">
                 <div class="d-flex flex-column align-items-center pt-2">
                   <div>برای نمایش اینماد</div>

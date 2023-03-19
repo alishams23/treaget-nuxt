@@ -87,7 +87,7 @@ export default {
 
       }
       fetch(
-        `https://treaget.com/api/UserRetrieveApi/${this.$route.params.user}/`, { headers: headers }
+        `http://127.0.0.1:8000/api/UserRetrieveApi/${this.$route.params.user}/`, { headers: headers }
       )
         .then((response) => response.json())
         .then((data) => {

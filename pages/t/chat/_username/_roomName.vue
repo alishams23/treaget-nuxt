@@ -169,7 +169,7 @@ export default {
         })
         
         fetch(
-          `https://treaget.com/api/chat/ChatRetrieve/${this.$route.params.username}/`,
+          `http://127.0.0.1:8000/api/chat/ChatRetrieve/${this.$route.params.username}/`,
           {
             headers: this.headers
           }
@@ -224,7 +224,7 @@ export default {
     connectToWebsocket (roomName) {
       this.loadingGetMessage = true
       this.chatSocket = new WebSocket(
-        'wss://' + 'treaget.com' + '/ws/chat/' + roomName + '/' +  this.$store.state.token + '/'
+        'ws://' + '127.0.0.1:8000' + '/ws/chat/' + roomName + '/' +  this.$store.state.token + '/'
       )
 
       this.chatSocket.onopen = (e) => {
@@ -234,7 +234,6 @@ export default {
       }
       this.chatSocket.onmessage = (e) => {
         const data = JSON.parse(e.data)
-
         if (data.command === 'fetch_message') {
           this.messages = data.message
           this.loadingGetMessage = false
@@ -243,11 +242,24 @@ export default {
         } else if (data.command === 'new_message') {
           this.addMessage(data)
           this.$nextTick( ()=> {
-            this.scrollMessage()})
+          this.scrollMessage()})
+          this.chatSocket.send(
+          JSON.stringify({ command: 'read_message', room_name: roomName,message:data.id })
+        )
+         console.log(data.id)
         } else if (data.command === 'img') {
           this.addMessage(data)
           this.$nextTick( ()=> {
             this.scrollMessage()})
+        } else if (data.command === 'read_message') {
+        
+          for(var i in this.messages){
+            if(this.messages[i].id == data.command.id){
+              this.messages[i].read = 'True';
+              this.$forceUpdate();
+            }
+           }
+         
         }
       }
       this.chatSocket.onclose = (e) => {

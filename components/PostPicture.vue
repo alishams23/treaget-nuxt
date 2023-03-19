@@ -104,7 +104,7 @@ export default {
       alert(`${window.location.hostname}/${dataValue} کپی شد.`);
     },
     async deletePicture(id) {
-      await fetch(`https://treaget.com/api/PicturePostDestroyRetrive/${id}/`, {
+      await fetch(`http://127.0.0.1:8000/api/PicturePostDestroyRetrive/${id}/`, {
         method: "delete",
         credentials: "same-origin",
         headers: {
@@ -118,7 +118,7 @@ export default {
       }
     },
     async like(id) {
-      await fetch(`https://treaget.com/api/AddLikeView/?Picture=${id}`, {
+      await fetch(`http://127.0.0.1:8000/api/AddLikeView/?Picture=${id}`, {
         headers: {
           "Content-type": "application/json",
           Accept: "application/json",

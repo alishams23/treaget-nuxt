@@ -45,7 +45,7 @@ export default {
     return 'landing'
   },methods : {
     getInfo(){
-      fetch(`https://treaget.com/api/UserRetrieveApi/${this.$store.state.username}/`,
+      fetch(`http://127.0.0.1:8000/api/UserRetrieveApi/${this.$store.state.username}/`,
         {
           headers: {
             "Content-type": "application/json",

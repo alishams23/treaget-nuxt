@@ -59,7 +59,7 @@ export default {
     async getData() {
       this.loading = true
       await fetch(
-        `https://treaget.com/api/DisputeApi/`,
+        `http://127.0.0.1:8000/api/DisputeApi/`,
         {
           headers: {
             "Content-type": "application/json",

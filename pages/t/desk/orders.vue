@@ -222,7 +222,7 @@ export default {
     OrdersApi() {
       this.loading = true
       this.listOrders = []
-      fetch(`https://treaget.com/api/OrderApi/`,{headers: {
+      fetch(`http://127.0.0.1:8000/api/OrderApi/`,{headers: {
           "Content-type": "application/json",
           Accept: "application/json",
           Authorization: `Token ${this.$store.state.token}`,
@@ -235,7 +235,7 @@ export default {
     },
     async CancelApi(id) {
       this.loadingCancel=true
-      await fetch(`https://treaget.com/api/OrderFalseApi/?pk=${id}`,{headers: {
+      await fetch(`http://127.0.0.1:8000/api/OrderFalseApi/?pk=${id}`,{headers: {
           "Content-type": "application/json",
           Accept: "application/json",
           Authorization: `Token ${this.$store.state.token}`,
@@ -245,7 +245,7 @@ export default {
     },
     async AcceptApi(id) {
       this.loadingAccept=true,
-      await fetch(`https://treaget.com/api/OrderTrueApi/?pk=${id}`,{headers: {
+      await fetch(`http://127.0.0.1:8000/api/OrderTrueApi/?pk=${id}`,{headers: {
           "Content-type": "application/json",
           Accept: "application/json",
           Authorization: `Token ${this.$store.state.token}`,

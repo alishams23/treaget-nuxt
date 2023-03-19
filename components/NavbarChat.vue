@@ -23,7 +23,7 @@
                 ">
             <img v-bind:src="
               $route.params.user.image != null
-                ? 'https://treaget.com' + $route.params.user.image
+                ? 'http://127.0.0.1:8000' + $route.params.user.image
                 : getImgUrl('inside/avatar.jpg')
             " alt="" class="rounded-2xl " />
           </div>

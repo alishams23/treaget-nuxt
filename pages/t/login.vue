@@ -95,7 +95,7 @@ export default {
         try {
           this.loading = true;
           let mydata = await axios
-            .post("https://treaget.com/api/token/", {
+            .post("http://127.0.0.1:8000/api/token/", {
               username: this.username,
               password: this.password,
             })

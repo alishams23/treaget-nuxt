@@ -24,7 +24,7 @@ export default {
   methods: {
     PictureApi() {
       fetch(
-        `https://treaget.com/api/PicturePostListApi/${this.username}/`
+        `http://127.0.0.1:8000/api/PicturePostListApi/${this.username}/`
       )
         .then((response) => response.json())
         .then((data) => {
