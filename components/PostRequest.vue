@@ -121,7 +121,7 @@ export default {
   },
   methods: {
     async deleteRequest(id) {
-      await fetch(`http://127.0.0.1:8000/api/DestroyRequestApi/${id}/`, {
+      await fetch(`https://treaget.com/api/DestroyRequestApi/${id}/`, {
         method: "delete",
         credentials: "same-origin",
         headers: {

@@ -149,7 +149,7 @@ export default {
       this.searchCategory(value);
     },
     getData() {
-      fetch(`http://127.0.0.1:8000/api/ProductApi/`, {
+      fetch(`https://treaget.com/api/ProductApi/`, {
         headers: {
           "Content-type": "application/json",
           Accept: "application/json",
@@ -179,7 +179,7 @@ export default {
       fd.append("category", this.chosen);
       fd.append("image", this.image);
       await axios
-        .post(`http://127.0.0.1:8000/api/AddPostPictureApi/`, fd, {
+        .post(`https://treaget.com/api/AddPostPictureApi/`, fd, {
           headers: {
             "Content-type": "application/json",
             Accept: "application/json",

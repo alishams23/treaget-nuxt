@@ -50,11 +50,13 @@
           <PostPicture v-if="data.item == 'picture'" :data="data.data" :reload="getDataHome" />
           <post-request v-if="data.item == 'request'" :data="data.data" :reload="getDataHome" />
         </div>
+      <empty v-if="results.length == 0 && !loading" />
+        
         <!-- post 2-->
   
         <!-- Load more-->
         <div class="loader-keeper">
-          <div class="d-flex justify-content-center" v-if="loading">
+          <div class="d-flex justify-content-center" v-if="loading ">
             <span class="loader"></span>
           </div>
         </div>
@@ -86,7 +88,7 @@ export default {
       userSuggestion: [],
       userFollowing: [],
       loadingFollowing: true,
-      url: "http://127.0.0.1:8000/api/HomeApiView/",
+      url: "https://treaget.com/api/HomeApiView/",
       selectedUser: null,
     };
   },
@@ -102,7 +104,7 @@ export default {
         : (userUrl = "");
 
       await fetch(
-        `http://127.0.0.1:8000/api/HomeApiView/?page=${page}${userUrl}`,
+        `https://treaget.com/api/HomeApiView/?page=${page}${userUrl}`,
         {
           headers: {
             "Content-type": "application/json",
@@ -120,7 +122,7 @@ export default {
 
     getUserFollowing() {
       this.loadingFollowing = true;
-      fetch(`http://127.0.0.1:8000/api/following/`, {
+      fetch(`https://treaget.com/api/following/`, {
         headers: {
           "Content-type": "application/json",
           Accept: "application/json",
@@ -134,7 +136,7 @@ export default {
         });
     },
     handleScroll() {
-      if (document.body.scrollHeight - window.scrollY <= 1000 && this.loading == false) {
+      if (document.body.scrollHeight - window.scrollY <= 1000 && this.loading == false && this.results != 0) {
         this.postPage += 1;
         this.getDataHome(this.postPage);
         // console.log('running');

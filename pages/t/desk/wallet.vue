@@ -51,7 +51,7 @@ export default {
         async getData() {
             this.loading = true
             await fetch(
-                `http://127.0.0.1:8000/api/wallet/listTransaction/`,
+                `https://treaget.com/api/wallet/listTransaction/`,
                 {
                     headers: {
                         "Content-type": "application/json",

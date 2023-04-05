@@ -95,7 +95,7 @@ export default {
         try {
           this.loading = true;
           let mydata = await axios
-            .post("http://127.0.0.1:8000/api/token/", {
+            .post("https://treaget.com/api/token/", {
               username: this.username,
               password: this.password,
             })
@@ -122,8 +122,6 @@ export default {
 
 button[type="submit"] {
   width: 100%;
-  border: 0;
-  border-radius: 25px;
   padding: 14px;
   background: #ff0000;
   color: #fff;
@@ -132,7 +130,6 @@ button[type="submit"] {
   font-size: 16px;
   font-weight: bold;
   margin-top: 10px;
-  transition: ease all 0.3s;
 }
 
 .bg-input {
@@ -157,7 +154,7 @@ button[type="submit"] {
   border: 1px solid #f51616;
 
   height: 55px;
-  padding-left: 1.25rem;
+
   color: #0b2238 !important;
   font-size: 16px;
   border-radius: 8px;

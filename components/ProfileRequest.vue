@@ -28,7 +28,7 @@ export default {
   methods: {
     getData() {
       fetch(
-        `http://127.0.0.1:8000/api/RequestListApi/${this.username}/`
+        `https://treaget.com/api/RequestListApi/${this.username}/`
       )
         .then((response) => response.json())
         .then((data) => {

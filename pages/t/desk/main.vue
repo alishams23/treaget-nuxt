@@ -236,7 +236,7 @@ export default {
     async getData() {
         this.loading= true
       this.loadingWallet= true
-      fetch(`http://127.0.0.1:8000/api/DeskApi/`, {
+      fetch(`https://treaget.com/api/DeskApi/`, {
         headers: {
           "Content-type": "application/json",
           Accept: "application/json",

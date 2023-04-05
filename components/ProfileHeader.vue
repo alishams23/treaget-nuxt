@@ -206,14 +206,14 @@ export default {
       }
     },
     shareLink() {
-      this.copyToClipboard(`http://127.0.0.1:8000/${this.data.username}/`)
+      this.copyToClipboard(`https://treaget.com/${this.data.username}/`)
       alert(` کپی شد.`);
     },
     async followHandler() {
       this.loadingFollow = true;
       try {
         await fetch(
-          `http://127.0.0.1:8000/api/FollowUnfollowApi/${this.data.username}`,
+          `https://treaget.com/api/FollowUnfollowApi/${this.data.username}`,
           {
             headers: {
               "Content-type": "application/json",

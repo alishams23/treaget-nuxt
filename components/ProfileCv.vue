@@ -65,7 +65,7 @@ export default {
       this.loading = true;
       this.cv=[]
       fetch(
-        `http://127.0.0.1:8000/api/timelineRetrieveApiView/?username=${this.username}`,
+        `https://treaget.com/api/timelineRetrieveApiView/?username=${this.username}`,
         {
           headers: {
             "Content-type": "application/json",
@@ -82,7 +82,7 @@ export default {
     deleteData(id){
       axios
         .delete(
-          `http://127.0.0.1:8000/api/timelineDeleteApi/${id}/`,
+          `https://treaget.com/api/timelineDeleteApi/${id}/`,
           
           {
             headers: {

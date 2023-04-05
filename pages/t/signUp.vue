@@ -46,7 +46,7 @@
         class="
           mt-5
           bg-treaget
-          btn-material btn-animation
+          btn-material 
           d-flex
           align-items-center
           justify-content-center
@@ -100,7 +100,7 @@
         v-model="lastName"
       />
       <div class="col-12">
-        <div class="d-flex mt-3 align-items-center">
+        <div class="d-flex  align-items-center">
           <input
             type="checkbox"
             id="service"
@@ -110,12 +110,11 @@
             style="width: 35px; height: 35px"
           />
           <label for="service" class="fw-light text-right"
-            >خدمات دهنده (فریلنسر در زمینه طراحی،برنامه نویسی،ترجمه،دستیار مجازی
-            و …)</label
+            >خدمات دهنده (فریلنسر)</label
           >
         </div>
         <br />
-        <div class="d-flex pt-3 border-t align-items-center">
+        <div class="d-flex  border-t align-items-center">
           <input
             type="checkbox"
             class="shadow-none m-3"
@@ -125,7 +124,7 @@
             v-model="checked2"
           />
           <label for="service2" class="fw-light text-right"
-            >کارفرما (خدمات گیرنده و استخدام کننده)</label
+            >کارفرما</label
           >
         </div>
         <br />
@@ -133,7 +132,7 @@
       <button
         class="
           bg-treaget
-          btn-material btn-animation
+          btn-material 
           d-flex
           align-items-center
           justify-content-center
@@ -194,7 +193,7 @@ export default {
       if ((a == false && b == true) || (a == true && b == false)) {
         this.loading = true;
         await axios
-          .post(`http://127.0.0.1:8000/api/UserCreate/`, {
+          .post(`https://treaget.com/api/UserCreate/`, {
             "username": this.username,
             "password": this.Password,
             "email": this.email,
@@ -271,8 +270,6 @@ export default {
 <style scoped>
 button[type="submit"] {
   width: 100%;
-  border: 0;
-  border-radius: 25px;
   padding: 14px;
   background: #ff0000;
   color: #fff;
@@ -281,7 +278,6 @@ button[type="submit"] {
   font-size: 16px;
   font-weight: bold;
   margin-top: 10px;
-  transition: ease all 0.3s;
 }
 
 .bg-input {
@@ -305,7 +301,7 @@ button[type="submit"] {
   box-shadow: none !important;
   border: 1px solid #f51616;
   height: 55px;
-  padding-left: 1.25rem;
+
   color: #0b2238 !important;
   font-size: 16px;
   border-radius: 8px;

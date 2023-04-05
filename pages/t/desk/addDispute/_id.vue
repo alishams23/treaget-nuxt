@@ -71,7 +71,7 @@ export default {
        
       await axios
         .post(
-          `http://127.0.0.1:8000/api/AddDisputeApi/`,
+          `https://treaget.com/api/AddDisputeApi/`,
           {
            safePayment: "1",
           description: this.text,

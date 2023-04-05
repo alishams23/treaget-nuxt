@@ -167,7 +167,7 @@ export default {
   },
   methods: {
     ServiceApi() {
-      fetch(`http://127.0.0.1:8000/api/ServiceListApi/${this.username}/`)
+      fetch(`https://treaget.com/api/ServiceListApi/${this.username}/`)
         .then((response) => response.json())
         .then((data) => {
           this.service = data;
@@ -197,7 +197,7 @@ export default {
           listOptionService.push(element["id"]);
       });
       fetch(
-        `http://127.0.0.1:8000/api/AddOrderApi/${this.orderData["author"]["username"]}` +
+        `https://treaget.com/api/AddOrderApi/${this.orderData["author"]["username"]}` +
           "/",
         {
           method: "post",

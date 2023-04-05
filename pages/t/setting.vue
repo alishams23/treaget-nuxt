@@ -122,7 +122,7 @@ export default {
   methods: {
     async getData() {
       this.loading = true;
-      await fetch(`http://127.0.0.1:8000/api/UserSettingApi/`, {
+      await fetch(`https://treaget.com/api/UserSettingApi/`, {
         method: "put",
         credentials: "same-origin",
         headers: {
@@ -146,7 +146,7 @@ export default {
         if (this.image != null )this.fd.append("image", this.image);
 
       await axios
-        .put(`http://127.0.0.1:8000/api/UserSettingApi/`, this.fd, {
+        .put(`https://treaget.com/api/UserSettingApi/`, this.fd, {
           headers: {
             "Content-type": "application/json",
             Accept: "application/json",

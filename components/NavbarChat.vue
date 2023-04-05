@@ -2,8 +2,9 @@
   <header class="bg-white d-flex align-items-center main-container border-bottom " style="position:fixed;">
     <div class="header_inner d-flex align-items-center navbar-left">
       <div class="left-side d-flex align-items-center">
+        {{ par }}
         <!-- Logo -->
-        <div @click="slideBarActivator" class="d-lg-none px-3">
+        <div @click="slideBarActivator" class="d-lg-none px-3" id="back">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
             class="bi bi-arrow-left-short" viewBox="0 0 16 16">
             <path fill-rule="evenodd"
@@ -23,7 +24,7 @@
                 ">
             <img v-bind:src="
               $route.params.user.image != null
-                ? 'http://127.0.0.1:8000' + $route.params.user.image
+                ? 'https://treaget.com' + $route.params.user.image
                 : getImgUrl('inside/avatar.jpg')
             " alt="" class="rounded-2xl " />
           </div>
@@ -48,7 +49,8 @@
 export default {
   data() {
     return {
-      user: null
+      user: null,
+      par:null
     }
   },
   methods: {
@@ -58,7 +60,7 @@ export default {
       return require("@/assets/" + pic);
     },
 
-  },
+  }
 
 };
 </script>

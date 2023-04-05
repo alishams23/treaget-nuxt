@@ -153,7 +153,7 @@ export default {
       this.loading = true;
       await axios
         .post(
-          `http://127.0.0.1:8000/api/ContactApi/`,
+          `https://treaget.com/api/ContactApi/`,
           {
             body: this.body,
             name: this.name,

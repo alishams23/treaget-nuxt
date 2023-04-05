@@ -254,7 +254,7 @@ export default {
     async userData() {
       this.loading = true;
       await fetch(
-        `http://127.0.0.1:8000/api/UserRetrieveApi/${this.$store.state.username}/`
+        `https://treaget.com/api/UserRetrieveApi/${this.$store.state.username}/`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -264,7 +264,7 @@ export default {
       this.$store.commit("getUser", this.user);
     },
     CountRead() {
-      fetch("http://127.0.0.1:8000/api/CountReadStatus/", {
+      fetch("https://treaget.com/api/CountReadStatus/", {
         headers: {
           "Content-type": "application/json",
           Accept: "application/json",
@@ -285,7 +285,7 @@ export default {
     },
     async SendSms() {
       this.statusSend = true
-      await fetch("http://127.0.0.1:8000/api/Send_code/", {
+      await fetch("https://treaget.com/api/Send_code/", {
         headers: {
           "Content-type": "application/json",
           Accept: "application/json",
@@ -300,7 +300,7 @@ export default {
       try {
         if (this.code != null) {
           this.statusCheck = false
-          let statusCheckApi = await fetch(`http://127.0.0.1:8000/api/Code_check/?code=${this.code}`, {
+          let statusCheckApi = await fetch(`https://treaget.com/api/Code_check/?code=${this.code}`, {
             headers: {
               "Content-type": "application/json",
               Accept: "application/json",

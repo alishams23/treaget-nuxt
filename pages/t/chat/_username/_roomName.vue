@@ -104,7 +104,7 @@
                       border-radius: 30px !important;
                       border-top: 1px solid #e2e8f0;
                     "
-                    class="shadow-2 rtl bg-glass"
+                    class="shadow-2 rtl bg-white"
                     @keyup.enter="sendMessage()"
                   >
                   <div class="d-flex align-items-center px-2">
@@ -164,27 +164,36 @@ export default {
       this.$route.params.roomName == null
     ) {
       if (this.$route.params.username != null) {
-        this.$router.push({
-          name: 't-chat-username-loading'
-        })
+        
+        // this.$router.push({
+        //   name: 't-chat-username-loading'
+        // })
+      
         
         fetch(
-          `http://127.0.0.1:8000/api/chat/ChatRetrieve/${this.$route.params.username}/`,
+          `https://treaget.com/api/chat/ChatRetrieve/${this.$route.params.username}/`,
           {
             headers: this.headers
           }
         )
           .then(response => response.json())
           .then((data) => {
-            console.log(data.contact.username)
-            this.$router.push({
-              name: 't-chat-username-roomName',
-              params: {
-                username: data.contact.username,
-                user: data.contact,
-                roomName: data.room_name
-              }
-            })
+            this.username = data.contact.username
+            this.$route.params.username = this.username
+            this.user = data.contact
+            this.$route.params.user = this.user
+            this.roomName = data.room_name
+            this.$route.params.roomName = this.roomName
+            this.$forceUpdate(); 
+            // this.$router.push({
+            //   name: 't-chat-username-roomName',
+            //   params: {
+            //     username: data.contact.username,
+            //     user: data.contact,
+            //     roomName: data.room_name
+            //   }
+            // }
+            // )
           })
       } else {
         this.slideBarActivator()
@@ -194,6 +203,10 @@ export default {
     }
   },
   beforeDestroy () {
+  //   console.log(document.getElementById('wrapper').classList.contains("sidebar-active") == false)
+  //   if (document.getElementById('wrapper').classList.contains("sidebar-active") == false) {
+  //      this.$router.push('/t/chat')
+  // }
     if (this.chatSocket != null) {
       this.chatSocket.close()
     }
@@ -224,7 +237,7 @@ export default {
     connectToWebsocket (roomName) {
       this.loadingGetMessage = true
       this.chatSocket = new WebSocket(
-        'ws://' + '127.0.0.1:8000' + '/ws/chat/' + roomName + '/' +  this.$store.state.token + '/'
+        'ws://' + 'treaget.com' + '/ws/chat/' + roomName + '/' +  this.$store.state.token + '/'
       )
 
       this.chatSocket.onopen = (e) => {
@@ -234,6 +247,7 @@ export default {
       }
       this.chatSocket.onmessage = (e) => {
         const data = JSON.parse(e.data)
+       
         if (data.command === 'fetch_message') {
           this.messages = data.message
           this.loadingGetMessage = false
@@ -246,7 +260,6 @@ export default {
           this.chatSocket.send(
           JSON.stringify({ command: 'read_message', room_name: roomName,message:data.id })
         )
-         console.log(data.id)
         } else if (data.command === 'img') {
           this.addMessage(data)
           this.$nextTick( ()=> {
@@ -254,7 +267,7 @@ export default {
         } else if (data.command === 'read_message') {
         
           for(var i in this.messages){
-            if(this.messages[i].id == data.command.id){
+            if(this.messages[i].id == data.id){
               this.messages[i].read = 'True';
               this.$forceUpdate();
             }
@@ -265,7 +278,8 @@ export default {
       this.chatSocket.onclose = (e) => {
         console.error('Chat socket closed unexpectedly')
       }
-    }
+    },
+ 
   }
 }
 </script>

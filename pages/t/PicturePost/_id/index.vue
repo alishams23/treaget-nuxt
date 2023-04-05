@@ -25,7 +25,7 @@ export default {
     async getData(page) {
       this.loading = true;
       await fetch(
-        `http://127.0.0.1:8000/api/PicturePostDestroyRetrive/${this.$route.params.id}/`,
+        `https://treaget.com/api/PicturePostDestroyRetrive/${this.$route.params.id}/`,
         {
           headers: {
             "Content-type": "application/json",

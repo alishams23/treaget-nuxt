@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     async getData() {
-      fetch(`http://127.0.0.1:8000/api/RulesListApi/`, {
+      fetch(`https://treaget.com/api/RulesListApi/`, {
         headers: {
           "Content-type": "application/json",
           Accept: "application/json",

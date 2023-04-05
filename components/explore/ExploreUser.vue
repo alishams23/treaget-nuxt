@@ -36,7 +36,7 @@ export default {
             this.loading = true;
             this.nextPage = true;
             try {
-                await fetch(`http://127.0.0.1:8000/api/UserSearchListApi/?search=${this.search}&page=${this.search == "" || this.search == null ? 1 : this.page}&ordering=${this.search == "" || this.search == null ? "?" : ""}`, {
+                await fetch(`https://treaget.com/api/UserSearchListApi/?search=${this.search}&page=${this.search == "" || this.search == null ? 1 : this.page}&ordering=${this.search == "" || this.search == null ? "?" : ""}`, {
                     headers: {
                         "Content-type": "application/json",
                         Accept: "application/json",
