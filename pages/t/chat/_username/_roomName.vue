@@ -237,7 +237,7 @@ export default {
     connectToWebsocket (roomName) {
       this.loadingGetMessage = true
       this.chatSocket = new WebSocket(
-        'ws://' + 'treaget.com' + '/ws/chat/' + roomName + '/' +  this.$store.state.token + '/'
+        'wss://' + 'treaget.com' + '/ws/chat/' + roomName + '/' +  this.$store.state.token + '/'
       )
 
       this.chatSocket.onopen = (e) => {
