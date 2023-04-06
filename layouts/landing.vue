@@ -121,11 +121,6 @@ export default {
   head () {
     return {
       link: [
-        // {
-        //   rel: "stylesheet",
-        //   type: "text/css",
-        //   href: "/css/uikit.min.css",
-        // },
         {
           rel: 'stylesheet',
           type: 'text/css',
