@@ -115,8 +115,8 @@
                     <path d="M16,15H8a1,1,0,0,0,0,2h8a1,1,0,0,0,0-2Z" />
                   </svg>
                   <span class="  mr-4"> گپ </span>
-                  <span class="nav-tag bg-treaget mx-1" v-if="counterMessage != 0 && counterMessage">
-                    {{ counterMessage }}</span>
+                  <span class="nav-tag bg-treaget mx-1" v-if="false">
+                   </span>
                 </button>
               </nuxt-link>
             </li>

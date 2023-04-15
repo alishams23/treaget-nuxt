@@ -150,7 +150,7 @@
       </button>
       <p class="font-s-13 mb-0 irsa text-center">
         کلیک روی ساخت اکانت به معنای موافقت با
-        <nuxt-link to="/t/Rules" class="text-treaget"> قوانین </nuxt-link> است
+        <nuxt-link to="/t/terms" class="text-treaget"> قوانین </nuxt-link> است
       </p>
     </form>
   </div>

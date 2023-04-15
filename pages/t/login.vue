@@ -57,7 +57,7 @@
         </div>
       </button>
      
-      <a class="text-center"
+      <a class="text-center" href="https://treaget.com/api/password_reset/"
         ><div class="mt-3">رمز عبور خود را فراموش کرده اید؟</div></a
       >
     </form>

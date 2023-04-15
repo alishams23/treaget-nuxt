@@ -88,7 +88,7 @@ export default {
             '/t/explore',
             '/t/login',
             '/t/signUp',
-            '/t/rules',
+            '/t/terms',
             '/t/contactUs',
 
         ]
