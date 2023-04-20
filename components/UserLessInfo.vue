@@ -8,11 +8,9 @@
         <img v-else src="@/assets/inside/avatar.jpg" class="w-full h-full  shadow-2 bg-gray-200 cover"
           style="border-radius: 33px; " />
         <a
-          class="bg-white-dark shadow rounded-full w-6 h-6 flex justify-center items-center text-white border-white absolute right-2 bottom-0">
-          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="white" class="bi bi-person-fill"
-            viewBox="0 0 16 16">
-            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-          </svg>
+          class="bg-black text-white shadow rounded-full w-6 h-6 flex justify-center items-center   absolute right-2 bottom-0">
+          
+          <i class="text-xs fad fa-user"></i>
         </a>
       </div>
 

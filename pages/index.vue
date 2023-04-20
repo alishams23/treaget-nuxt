@@ -3,7 +3,7 @@
     <NavbarMain />
   
 
-    <div style='position:relative' >
+    <div style='position:relative'  >
       <section class="hero rtl ">
         <div class="hero__wrapper">
           <div class="container">
@@ -130,7 +130,7 @@
           <div class="col-lg-3 col-md-6">
             <div class="feature__box feature__box--4">
               <div class="icon icon-4">
-                <i class="fad fa-robot"></i>
+                <i class="fad fa-database"></i>
               </div>
               <div class="feature__box__wrapper">
                 <div class="feature__box--content feature__box--content-4">
@@ -146,7 +146,6 @@
       </div>
     </section>
     <!--feature section end-->
-<div></div>
     <!--video section start-->
     <div class="video mt-5 d-none d-lg-block" id="video">
       <div class="video__wrapper">
@@ -264,169 +263,6 @@
     </section>
     <!--growth section end-->
 
-    <!--step section start-->
-    <!-- <section class="step">
-      <div class="step__wrapper">
-        <div class="container">
-          <h2 class="section-heading color-black">
-            Jumpstart your growth in just few clicks.
-          </h2>
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="step__box">
-                <div class="image">
-                  <img
-                    src="@/assets/inside/images/main/phone-01.png"
-                    alt="image"
-                  />
-                </div>
-                <div class="content">
-                  <h3>EASY TO<span>Register.</span></h3>
-                  <p class="paragraph dark">
-                    Join the app in 3 easy steps and get started with your
-                    progresso daily.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="step__box">
-                <div class="image">
-                  <img
-                    src="@/assets/inside/images/main/phone-02.png"
-                    alt="image"
-                  />
-                </div>
-                <div class="content">
-                  <h3>SIMPLE TO<span>Create.</span></h3>
-                  <p class="paragraph dark">
-                    Once you’re signed up you can create as many polls you want
-                    to watch.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="step__box">
-                <div class="image">
-                  <img
-                    src="@/assets/inside/images/main/phone-03.png"
-                    alt="image"
-                  />
-                </div>
-                <div class="content">
-                  <h3>FUN TO<span>Measure.</span></h3>
-                  <p class="paragraph dark">
-                    Share your growth results with your friends and inspre
-                    others.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="button__wrapper d-flex justify-content-center">
-              <a
-                href="#"
-                class="
-                  button
-                  rounded-pill
-                  d-flex
-                  align-items-center
-                  text-black
-                  hover-white
-                "
-              >
-                <div class="text-center">
-                  دانلود از کافه بازار <i class="fad fa-long-arrow-right"></i>
-                </div>
-              </a>
-              <a
-                href="#"
-                class="
-                  button
-                  rounded-pill
-                  d-flex
-                  align-items-center
-                  text-black
-                  hover-white
-                "
-              >
-                <div class="text-center">
-                  دانلود با لینک مستقیم <i class="fad fa-long-arrow-right"></i>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!--step section end-->
-
-    <!--related blog section start-->
-    <!-- <section class="related-blog blog">
-      <div class="related-blog__wrapper">
-        <h2 class="section-heading color-black">
-          Read latest news from our blog.
-        </h2>
-        <div class="blog__content">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-4">
-                <a href="blog-single.html">
-                  <div class="blog__single blog__single--1">
-                    <div class="blog__single-image">
-                      <img
-                        src="@/assets/inside/images/main/blog-img-1.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div class="blog__single-info">
-                      <h3>New features coming in 2020 to our app.</h3>
-                      <h4>
-                        12 <i class="fad fa-comment"></i><span>|</span>Dec 17,
-                        2020
-                      </h4>
-                      <p class="paragraph dark">
-                        Suisque metus tortor ultricies ac ligula neced eleifend
-                        dales felise morbi nec tempor isvel ultricies lideula.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-lg-8">
-                <a href="blog-single.html">
-                  <div class="blog__single blog__single--2">
-                    <div class="blog__single-image">
-                      <img
-                        src="@/assets/inside/images/main/blog-img-2.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div class="blog__single-info">
-                      <h3>New features coming in 2020 to our app.</h3>
-                      <h4>
-                        12 <i class="fad fa-comment"></i><span>|</span>Dec 17,
-                        2020
-                      </h4>
-                      <p class="paragraph dark">
-                        Suisque metus tortor ultricies ac ligula neced eleifend
-                        dales felise morbi nec tempor isvel ultricies lideula.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a href="blog.html" class="button rounded-pill text-black hover-white">
-          <div class="">GO TO BLOG <i class="fad fa-long-arrow-right"></i></div>
-        </a>
-      </div>
-    </section> -->
-    <!--related blog section end-->
 
     <!--footer start-->
     <Footer />

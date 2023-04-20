@@ -12,10 +12,8 @@
         <masonry-wall :items="service" :ssr-columns="1" :column-width="160" :gap="16">
           <template #default="{ item, index }">
             <div class="rounded-lg shadow-lg  border-t bg-white w-full text-center">
-              <h4 class="irsa py-3 text-md" v-if="item.nameProduct != null">
-                {{ item.nameProduct.title }}
-              </h4>
-              <h4 class="irsa py-3 text-md" v-else>{{ item.specialName }}</h4>
+              
+              <h4 class="irsa py-3 text-md" >{{ item.specialName }}</h4>
               <div class="my-2 pb-2" v-if="item.price">
                 <p class="irsa text-sm text-black">{{ item.price }}</p>
                 <span class="coins irsa text-sm">تومان</span>
@@ -167,7 +165,7 @@ export default {
   },
   methods: {
     ServiceApi() {
-      fetch(`https://treaget.com/api/ServiceListApi/${this.username}/`)
+      fetch(`https://treaget.com/api/profile_items/ServiceListApi/${this.username}/`)
         .then((response) => response.json())
         .then((data) => {
           this.service = data;

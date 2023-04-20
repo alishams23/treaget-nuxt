@@ -105,7 +105,7 @@
           </div>
 
 
-          <nuxt-link tag="button" to="/t/setting"
+          <nuxt-link tag="button" to="/t/settings"
             class="text-xs my-1 btn-material btn-animation bg-treaget btn-animation-shadow   "
             v-if="data.username == this.$store.state.username">
             تنظیمات

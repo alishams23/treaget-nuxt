@@ -25,7 +25,7 @@
   <div>
     <form @submit.prevent="sendData">
       <div class="grid rtl grid-cols-2 gap-3 lg:p-6 p-4">
-        <div class="col-span-2" id="nameProduct">
+        <div class="col-span-2" >
           <label for="id_body" class="rtl fs-2 text-treaget irsa"
             >ارتباط با ما</label
           >

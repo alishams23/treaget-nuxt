@@ -149,7 +149,7 @@ export default {
       this.searchCategory(value);
     },
     getData() {
-      fetch(`https://treaget.com/api/ProductApi/`, {
+      fetch(`https://treaget.com/api/profile_items/SkillsList/`, {
         headers: {
           "Content-type": "application/json",
           Accept: "application/json",

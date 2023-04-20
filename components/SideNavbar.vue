@@ -166,9 +166,9 @@
             <span class="  mr-4" style="color: #e0e0e0"> عمومی </span>
           </li>
           <li>
-            <nuxt-link to="/t/setting" class="rtl hover:text-yellow">
+            <nuxt-link to="/t/settings" class="rtl hover:text-yellow">
               <button class="col-12 d-flex align-items-center rounded-13" v-bind:class="
-                currentRouteName() == 't-setting'
+              currentRouteCheck('settings')
                   ? 'btn-material  bg-treaget text-white'
                   : ''
               ">

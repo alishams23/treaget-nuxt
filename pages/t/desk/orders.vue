@@ -61,9 +61,7 @@
           <div v-if="order.service && order.service.specialName">
             {{ order.service.specialName }}
           </div>
-          <div v-else-if="order.service && order.service.nameProduct">
-            {{ order.service.nameProduct.title }}
-          </div>
+         
           <div v-else>{{ order.title }}</div>
         </div>
         <div>

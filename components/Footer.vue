@@ -86,9 +86,9 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 col-12 d-none d-lg-block">  
-               <div class="d-flex   align-items-end justify-content-center flex-column">
-                <div class=" d-flex   align-items-center justify-content-center">
+              <div class="col-lg-3 col-12 k">  
+               <div class="d-flex   align-items-end d-none d-lg-block  justify-content-center flex-column">
+                <div class=" d-flex  align-items-center justify-content-center">
                     <div class=" bg-treaget mx-3 px-5 py-3 fw-bold fs-5 rounded-pill text-white">
                         <nuxt-link class="px-2" to="/t/home">ورود</nuxt-link>
                       </div>
@@ -97,7 +97,7 @@
                       </div>
                 </div>
                </div>
-               <div class="d-flex align-items-end flex-column mt-5 ">
+               <div class="d-flex align-items-end flex-column mt-5 pt-5">
                 <a href="https://treaget.com/api/wallet/enamad/" class=" d-flex flex-column align-items-center border rounded-10 p-2" style="">
                   <img src="@/assets/inside/images/enamad.png" style="width:50px">
                   <div class="d-flex text-xs flex-column align-items-center pt-2">

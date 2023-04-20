@@ -5,32 +5,12 @@
         <div class=" rtl">
           <label class="rtl fs-4 text-treaget irsa">افزودن خدمات</label>
 
-          <div id="specialName" hidden>
+          <div id="specialName" >
             <p class="fs-6 pb-2 text-muted"> نام خدمات</p>
             <input type="text" class="shadow-none px-2 bg-gray-100 border-bottom" v-model="specialName" />
           </div>
-          <div class=" " id="nameProduct">
-            <div class="justify-content-between rtl  fs-6 text-muted d-flex">
-              <div class="pb-2">نام خدمات طبق دسته بندی</div>
-             
-            </div>
-            <div id="list1" class="dropdown-check-list col-12" tabindex="100">
-              <input type="text" name="alt" maxlength="200" @input="inputMethod" v-model="text"
-                class="shadow-none rtl bg-gray-100 anchor border-bottom" @click="anchorClick" autocomplete="off"
-                id="id_alt" />
-
-              <ul class="items bg-gray-100  scrollBarStyleSmall" style="max-height: 220px; overflow-y: scroll">
-                <li class="d-flex justify-content-end p-2 border-bottom " @click="choseOption(item)" :class="
-                  nameProduct == item.pk ? 'bg-dark text-white ' : ''
-                " v-for="item in category" :key="item.pk + 'category-addService'">
-                  <div>{{ item.title }}</div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div >
-            <a class="text-blue-400 text-xs" @click="changeDiv()">انتخاب نام خدمات خارج از دسته بندی</a>
-          </div>
+       
+      
           <div class="">
             <p class="fs-6 pb-2 text-muted">قیمت به تومان</p>
             <input type="number" placeholder="price" v-model="priceProduct"
@@ -141,7 +121,6 @@ export default {
       showAlert: false,
       priceOption: "",
       optionName: "",
-      nameProduct: "",
       priceProduct: "",
       specialName: "",
       category: [],
@@ -150,29 +129,14 @@ export default {
       loading: false,
     };
   },
-  mounted() {
-    this.getData();
-  },
+ 
   methods: {
-    changeDiv() {
-      let SpecialName = document.querySelector("#specialName");
-      let attrSpecialName = SpecialName.getAttribute("hidden");
-      let nameProduct = document.querySelector("#nameProduct");
-      if (attrSpecialName != null) {
-        SpecialName.removeAttribute("hidden");
-        nameProduct.setAttribute("hidden", null);
-        this.nameProduct = "";
-      } else {
-        nameProduct.removeAttribute("hidden");
-        SpecialName.setAttribute("hidden", null);
-        this.specialName = "";
-      }
-    },
+  
     deleteOption(index) {
       this.serviceOption.splice(index, 1);
     },
     submitModel() {
-      fetch("https://treaget.com/api/AddOptionService/", {
+      fetch("https://treaget.com/api/profile_items/AddOptionService/", {
         method: "post",
         credentials: "same-origin",
         headers: {
@@ -203,7 +167,7 @@ export default {
         dataOption.push(element["id"]);
       });
       this.loading = true
-      await fetch("https://treaget.com/api/AddService/", {
+      await fetch("https://treaget.com/api/profile_items/AddService/", {
         method: "post",
         credentials: "same-origin",
         headers: {
@@ -213,7 +177,6 @@ export default {
         },
         body: JSON.stringify({
           serviceOption: dataOption,
-          nameProduct: parseInt(this.nameProduct),
           price: parseInt(this.priceProduct),
           specialName: this.specialName,
         }),
@@ -225,20 +188,7 @@ export default {
       this.loading = false
 
     },
-    getData() {
-      fetch(`https://treaget.com/api/ProductApi/`, {
-        headers: {
-          "Content-type": "application/json",
-          Accept: "application/json",
-          Authorization: `Token ${this.$store.state.token}`,
-        },
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          this.category = data;
-          this.categoriesInstance = data;
-        });
-    },
+  
     searchCategory(value) {
       if (this.text == "") {
         this.category = this.categoriesInstance;
@@ -261,15 +211,8 @@ export default {
         checkList.classList.remove("visible");
       else checkList.classList.add("visible");
     },
-    choseOption(item) {
-      if (this.nameProduct == item.pk) {
-        this.nameProduct = "";
-        this.text = "";
-      } else {
-        this.nameProduct = item.pk;
-        this.text = item.title;
-      }
-    },
+  
+    
     closeModal() {
       document
         .querySelector(".treaget-modal-product-check")
@@ -285,8 +228,8 @@ export default {
     },
     openModalOption() {
       document.querySelector(".treaget-modal-option").classList.add("open");
-    },
-  },
+    },}
+  
 };
 </script>
 
