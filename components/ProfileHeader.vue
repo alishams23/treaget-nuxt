@@ -206,7 +206,7 @@ export default {
       }
     },
     shareLink() {
-      this.copyToClipboard(`https://treaget.com/${this.data.username}/`)
+      this.copyToClipboard(`/${this.data.username}/`)
       alert(` کپی شد.`);
     },
     async followHandler() {

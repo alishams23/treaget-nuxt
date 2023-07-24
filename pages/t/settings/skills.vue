@@ -4,7 +4,7 @@
         <div class="p-4">
          
             <div class="rtl fs-4 mb-4 text-treaget fw-bold text-right mt-5 irsa">
-              تنظیمات
+              
             </div>
           
            

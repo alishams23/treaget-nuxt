@@ -71,7 +71,7 @@ export default {
       this.loading = true;
       await axios
         .post(
-          `https://treaget.com/api/timelineCreateApi/`,
+          `https://treaget.com/api/profile_items/timelineCreateApi/`,
           {
             body: this.text,
           },

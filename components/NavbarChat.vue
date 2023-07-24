@@ -24,7 +24,7 @@
                 ">
             <img v-bind:src="
               $route.params.user.image != null
-                ? 'https://treaget.com' + $route.params.user.image
+                ? '' + $route.params.user.image
                 : getImgUrl('inside/avatar.jpg')
             " alt="" class="rounded-2xl " />
           </div>

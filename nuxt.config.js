@@ -25,7 +25,7 @@ export default {
     ],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-    plugins: ['~/plugins/masonary.js'],
+    plugins: ['~/plugins/masonary.js',{src: './plugins/vue2-editor', ssr: false}, { src: '~/plugins/vue-picture-input.js',mode: 'client' }],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,
@@ -41,7 +41,7 @@ export default {
     modules: [
         ['nuxt-twa-module', {
             /* module options */
-            defaultUrl: 'http://127.0.0.1:8000',
+            defaultUrl: 'https://treaget.com',
             hostName: 'treaget.com',
             sha256Fingerprints: ['45:B5:72:8F:DA:E2:E6:5B:E2:09:DB:D4:4B:22:EE:40:1E:A2:27:42:CC:9F:47:CB:42:B2:CE:88:1F:BF:EE:96'],
             applicationId: 'com.treaget.treaget',
@@ -63,6 +63,7 @@ export default {
         '@nuxtjs/pwa',
         // 'nuxt-i18n',
         '@nuxtjs/sitemap',
+        "vue2-editor/nuxt",
         
     ],
     messaging: {
@@ -76,7 +77,7 @@ export default {
         // fcmPublicVapidKey: '<publicVapidKey>' // OPTIONAL : Sets vapid key for FCM after initialization
     },
     sitemap: {
-        hostname: 'http://127.0.0.1:8000',
+        hostname: 'https://treaget.com',
         gzip: true,
         exclude: [
 
@@ -95,10 +96,25 @@ export default {
     },
     // Axios module configuration: https://go.nuxtjs.dev/config-axios
     axios: {
-        // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-        baseURL: '/'
-    },
-
+        // proxy: true,
+        baseURL: '/', // Replace with your Django API URL
+        // credentials: true,
+      },
+    //   proxy: {
+    //     '/api/': {
+    //       target: 'https://treaget.com', // Replace with your Django backend URL
+    //       changeOrigin: true,
+    //     },
+    //   },
+      router: {
+        extendRoutes(routes, resolve) {
+          routes.push({
+            path: '/api/accounts/google/login/callback/',
+            component: resolve(__dirname, 'pages/google/google-login-callback.js'),
+            name: 'api-google-login-callback',
+          });
+        },
+      },
     // PWA module configuration: https://go.nuxtjs.dev/pwa
     pwa: {
         manifest: {

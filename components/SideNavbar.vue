@@ -335,7 +335,7 @@ export default {
   mounted() {
     this.userData();
    
-    setInterval(() => this.CountRead(), 18000);
+
   },
 };
 </script>

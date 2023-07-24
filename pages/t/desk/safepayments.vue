@@ -61,7 +61,7 @@
         </div>
         <div class="d-flex flex-wrap mt-3">
           <br />
-          <nuxt-link :to="`/api/projectManager/kanban/${result.id}`" 
+          <nuxt-link :to="`https://treaget.com/api/projectManager/kanban/${result.id}`" 
             class="
               bg-blue-600
               flex-fill

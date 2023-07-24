@@ -5,7 +5,6 @@
     <p class="text-danger px-5 text-treaget py-3">{{ errorGeneral }}</p>
     <form @submit.prevent="level = 1" class="px-5 py-5" v-if="level == 0">
       <label class="text-right" for="username">نام کاربری</label>
-
       <input
         type="text"
         name="username"

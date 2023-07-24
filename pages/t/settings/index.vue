@@ -20,7 +20,7 @@
     </nuxt-link>
 
     <nuxt-link
-    to="/t/settings/typeUser"
+    to="/t/settings/skills"
     class="d-flex rtl align-items-center justify-content-between  px-4  shadow-1 rounded-13 mb-3 py-4"
   >
     <div>

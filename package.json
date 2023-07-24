@@ -25,10 +25,13 @@
         "nuxt": "^2.15.8",
         "nuxt-twa-module": "^1.3.1",
         "pm2": "^5.2.0",
+        "v-suggest": "^2.2.0",
         "vue": "^2.6.14",
         "vue-dragscroll": "^3.0.1",
+        "vue-picture-input": "^3.0.1",
         "vue-server-renderer": "^2.6.14",
         "vue-template-compiler": "^2.6.14",
+        "vue2-editor": "^2.10.3",
         "vuedraggable-axis": "^1.0.0",
         "webpack": "^4.46.0"
     },

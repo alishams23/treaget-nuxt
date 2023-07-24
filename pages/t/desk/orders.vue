@@ -78,7 +78,7 @@
         </div>
         <div class="d-flex flex-wrap mt-3">
           <br />
-          <nuxt-link :to="`/api/projectManager/kanban/${order.safePayment.id}`"
+          <nuxt-link :to="`https://treaget.com/api/projectManager/kanban/${order.safePayment.id}`"
             v-if="order.accept == true && order.safePayment"
            
             class="

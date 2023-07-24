@@ -5,7 +5,7 @@
             <div class=" w-10 h-10 rounded-2xl">
                 <img :src="
                     user.image != null
-                        ? 'https://treaget.com' + user.image
+                        ? '' + user.image
                         : getImgUrl('inside/avatar.jpg')
                 " class="cover w-full h-full rounded-2xl shadow-lg">
             </div>

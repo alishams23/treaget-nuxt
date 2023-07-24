@@ -217,7 +217,6 @@ span.bookmark-icon {
     transition: -webkit-transform 0.4s cubic-bezier(0.8, -0.41, 0.19, 2.5);
     transition: transform 0.4s cubic-bezier(0.8, -0.41, 0.19, 2.5);
     transition: transform 0.4s cubic-bezier(0.8, -0.41, 0.19, 2.5), -webkit-transform 0.4s cubic-bezier(0.8, -0.41, 0.19, 2.5);
-    font-family: "Material-Icons";
     position: absolute;
     right: 0;
     left: 0;
@@ -884,7 +883,7 @@ img {
 .keyword .keyword-remove:before {
     display: inline-block;
     cursor: pointer;
-    font-family: "Feather-Icons";
+  
     content: "\ea02";
     line-height: 20px;
     position: relative;
@@ -1302,7 +1301,7 @@ body {
     /* color: #666; */
     font-size: 15px;
     /* line-height: 27px; */
-    font-family: "Inter", sans-serif;
+
     text-transform: none;
     overflow-y: scroll;
 }
@@ -1321,32 +1320,29 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Inter", sans-serif;
     text-transform: none;
 }
 
 input[type="text"],
 input[type="password"],
 input[type="email"] {
-    font-family: "Inter", sans-serif;
     text-transform: none;
 }
 
 textarea,
 select {
-    font-family: "Inter", sans-serif;
     text-transform: none;
 }
 
 input[type="button"],
 input[type="submit"] {
-    font-family: "Inter", sans-serif;
+
     text-transform: none;
 }
 
 button,
 body .pac-container {
-    font-family: "Inter", sans-serif;
+
     text-transform: none;
 }
 
@@ -2146,7 +2142,7 @@ header .uk-dropdown {
 }
 
 .sidebar .sidebar_inner ul li a:after {
-    font-family: "Feather-Icons";
+
     content: '\e92e';
     opacity: 1;
     font-size: 19px;
@@ -2405,7 +2401,7 @@ header .uk-dropdown {
 }
 
 .btn-mobile::before {
-    font-family: "Feather-Icons";
+    
     font-size: 22px;
     content: '\ea02';
     line-height: 30px;
